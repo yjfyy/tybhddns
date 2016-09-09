@@ -13,7 +13,8 @@ Public Class Service1
         ' 在此处添加代码以执行任何必要的拆解操作，从而停止您的服务。
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
         hosts_reader("C:\Windows\System32\drivers\etc\hosts")
 
         Dim i As Integer = 0
@@ -56,6 +57,7 @@ Public Class Service1
 
 
         hosts_writer("C:\Windows\System32\drivers\etc\hosts", strread)
+        hosts_writer("log.txt", strread)
     End Sub
 
     Public Sub hosts_writer(ByVal parth As String, ByVal str() As String)
