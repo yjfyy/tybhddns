@@ -32,6 +32,8 @@
         '
         'ServiceInstaller1
         '
+        Me.ServiceInstaller1.Description = "博惠战网逆向IP解析服务。"
+        Me.ServiceInstaller1.DisplayName = "tybhddns"
         Me.ServiceInstaller1.ServiceName = "tybhddns"
         Me.ServiceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic
         '
@@ -40,6 +42,6 @@
         Me.Installers.AddRange(New System.Configuration.Install.Installer() {Me.ServiceProcessInstaller1, Me.ServiceInstaller1})
 
     End Sub
-    Public WithEvents ServiceInstaller1 As ServiceProcess.ServiceInstaller
     Private WithEvents ServiceProcessInstaller1 As ServiceProcess.ServiceProcessInstaller
+    Private WithEvents ServiceInstaller1 As ServiceProcess.ServiceInstaller
 End Class
