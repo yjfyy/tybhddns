@@ -26,7 +26,7 @@
         '
         'ServiceProcessInstaller1
         '
-        Me.ServiceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalService
+        Me.ServiceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalSystem
         Me.ServiceProcessInstaller1.Password = Nothing
         Me.ServiceProcessInstaller1.Username = Nothing
         '
@@ -40,7 +40,6 @@
         Me.Installers.AddRange(New System.Configuration.Install.Installer() {Me.ServiceProcessInstaller1, Me.ServiceInstaller1})
 
     End Sub
-
-    Friend WithEvents ServiceProcessInstaller1 As ServiceProcess.ServiceProcessInstaller
     Public WithEvents ServiceInstaller1 As ServiceProcess.ServiceInstaller
+    Private WithEvents ServiceProcessInstaller1 As ServiceProcess.ServiceProcessInstaller
 End Class

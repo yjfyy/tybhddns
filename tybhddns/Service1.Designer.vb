@@ -41,15 +41,6 @@ Partial Class Service1
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim Timer1 As System.Windows.Forms.Timer
-        Timer1 = New System.Windows.Forms.Timer(Me.components)
-        '
-        'Timer1
-        '
-        Timer1.Enabled = True
-        Timer1.Interval = 10000
-        AddHandler Timer1.Tick, AddressOf Me.Timer1_Tick
         '
         'Service1
         '
